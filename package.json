@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarceMelgar/proyecto_coder_house_dw.git"
+    "url": "git+https://github.com/MarceMelgar/Proyecto-dw-CoderHouse.git"
   },
   "keywords": [
     "node"
@@ -18,9 +18,9 @@
   "author": "MarceMelgar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MarceMelgar/proyecto_coder_house_dw/issues"
+    "url": "https://github.com/MarceMelgar/Proyecto-dw-CoderHouse/issues"
   },
-  "homepage": "https://github.com/MarceMelgar/proyecto_coder_house_dw#readme",
+  "homepage": "https://github.com/MarceMelgar/Proyecto-dw-CoderHouse#readme",
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.19"
