@@ -1,0 +1,79 @@
+footer {
+    background-image: $color-footer;
+    height: 20vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "made contrata redes";
+    justify-content: space-around;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    p {
+        grid-area: made; 
+        text-align: center;
+        margin-top: 2em;
+        font-size: larger;
+        color: rgb(255, 255, 255);
+    }
+    span {
+        grid-area: contrata;
+        text-align: center;
+        margin-top: 1em;
+        color:rgb(255, 255, 255);
+    }
+    div {
+        grid-area: redes;
+        a {
+            padding: .5em;;
+        }
+    }
+}
+
+// MIXIN DE REDES
+
+.bi-youtube  { 
+    @include redes($youtube);
+}
+
+.bi-spotify  { 
+    @include redes($spotify);
+}
+
+.bi-instagram {
+    @include redes($instagram);
+}
+
+.bi-twitter {
+    @include redes($twitter);
+}
+
+
+// RESPONSIVE
+
+
+@media only screen and (max-width: 1024px) {
+
+    footer {
+        height: 35vh;
+        grid-template-rows: 3fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "made"
+                                "contrata" 
+                                "redes";
+    }
+
+    #made {
+        margin-bottom: 1em ;
+    }
+
+    
+    #redes {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    footer p {
+        padding-right: 0;
+    }
+}
