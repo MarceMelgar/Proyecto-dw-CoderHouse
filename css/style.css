@@ -121,9 +121,6 @@ body {
     opacity: 1;
     transform: scale(1); } }
   body #img-fondo-home {
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
     height: 100vh;
     background-image: url("/img/Portada4.jpg");
     background-color: rgba(0, 0, 0, 0.6);
