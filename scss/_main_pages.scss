@@ -41,7 +41,7 @@ div {
 }
 
 h2 {
-    padding-top: 2.5em;
+    padding-top: 1.5em;
 }
 
 h3 {
@@ -66,14 +66,13 @@ h3 {
 /* FOTOS
 -------------------------------------------------- */
 
-#galeria img {
-    width: 100%;
-}
 
-#galeria .col-lg-3 {
+.col-lg-3 {
     padding: 10px;
 }
+
 .cada-foto {
+    width: 100%;
     transition: 0.5s;
     object-fit: cover;
 }
@@ -115,13 +114,13 @@ h3 {
 .btn-primary {
     background-color: red;
     border-color: red;
-    }
-
+}
 
 .btn-primary:hover {
     background-color: rgb(254, 109, 109);
     border-color: rgb(254, 109, 109);
     }
+
 .btn {
     margin-top: 1em;
     padding: 20px 30px;
@@ -159,8 +158,6 @@ h3 {
         transform:scale(1);
     }
 }
-
-
 
 
 /* RESPONSIVE

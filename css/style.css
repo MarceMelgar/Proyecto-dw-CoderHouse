@@ -23,7 +23,7 @@ body {
 -------------------------------------------------- */
   /* Aparición de imagen */
   /* Aparición bloque informativo */
-  /* Estilos bloque informativo */
+  /* Botón con efecto Glitch */
   /* Efecto de flechas hacía abajo */
   /* FIN DE INTRO
 -------------------------------------------------- */
@@ -121,15 +121,23 @@ body {
     opacity: 1;
     transform: scale(1); } }
   body #img-fondo-home {
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
     height: 100vh;
     background-image: url("/img/Portada4.jpg");
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: soft-light;
     background-position: center;
     background-size: cover; }
+  body .cta {
+    bottom: 0;
+    left: 0;
+    padding-bottom: 2rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 4; }
   body #aparecion-info {
     animation-name: info-aparece; }
 
@@ -143,6 +151,11 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0px); } }
+  body #h3-cta {
+    margin-top: 0em;
+    margin-bottom: 1em;
+    font-size: large;
+    color: white; }
   body .btn-intro {
     width: 320px;
     height: 70px;
@@ -214,30 +227,6 @@ body {
   100% {
     clip-path: var(--slice-1);
     transform: translate(0); } }
-  body .cta {
-    bottom: 0;
-    left: 0;
-    padding-bottom: 2rem;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    z-index: 4; }
-  body #h3-cta {
-    margin-top: 0em;
-    margin-bottom: 1em;
-    font-size: large;
-    color: white; }
-  body .btn-cta, body .btn-wp {
-    border-bottom: 2px solid red;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 2em 0.7em;
-    margin-bottom: 10px;
-    text-align: center;
-    vertical-align: middle;
-    color: white; }
-  body .btn-cta:hover, body .btn-wp:hover {
-    color: red; }
   body #mas-info {
     margin-top: 2em;
     color: white; }
@@ -275,52 +264,53 @@ body {
     justify-content: center;
     align-items: center;
     padding-bottom: 1.5em; }
-    body main aside div p, body main aside div .p-center {
+    body main aside div p.a-mano, body main aside div .a-mano.p-center {
       font-family: 'Nanum Pen Script', cursive;
       font-size: 30px;
       text-align: center;
       padding-top: 1em;
       padding-bottom: 1em; }
-  body main section.container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center; }
-    body main section.container h2.h2-home {
-      padding-top: 3em;
+  body main h2.h2-home {
+    padding-top: 3em;
+    text-align: center;
+    font-size: 2em; }
+  body main section div img {
+    width: 100%; }
+  body main section div#columna ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    body main section div#columna ul li.row a.btn-buy {
+      border-bottom: 2px solid red;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 2em 0.7em;
+      margin-bottom: 10px;
       text-align: center;
-      font-size: 2.2em; }
-    body main section.container div {
-      justify-content: center; }
-      body main section.container div img {
-        width: 100%; }
-    body main section.container div#columna ul {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-      body main section.container div#columna ul li a.btn-buy {
-        border-bottom: 2px solid red;
-        text-decoration: none;
-        display: inline-block;
-        padding: 0 2em 0.7em;
-        margin-bottom: 10px;
-        text-align: center;
-        vertical-align: middle;
-        color: black; }
-        body main section.container div#columna ul li a.btn-buy:hover {
-          color: red; }
+      vertical-align: middle;
+      color: black; }
+      body main section div#columna ul li.row a.btn-buy:hover {
+        color: red; }
   body main article.container {
-    padding-bottom: 2em; }
+    padding-bottom: 4em; }
+  body .btn-cta, body .btn-wp {
+    border-bottom: 2px solid red;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 2em 0.7em;
+    margin-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: white; }
+  body .btn-cta:hover, body .btn-wp:hover {
+    color: red; }
   body .btn-wp {
     padding: 0 1em;
     margin-bottom: 0px;
     vertical-align: auto;
     color: black; }
   @media only screen and (max-width: 1024px) {
-    body article p, body article .p-center {
+    body article p, body article .p-center, body .h2-home {
       margin-left: 1.5em;
       margin-right: 1.5em; } }
   @media only screen and (max-width: 576px) {
@@ -341,7 +331,7 @@ body {
     font-size: calc(7rem + 2.5vw);
     font-weight: 700; }
   body h2 {
-    padding-top: 2.5em; }
+    padding-top: 1.5em; }
   body h3 {
     padding-top: 1.2em; }
   body .row {
@@ -351,11 +341,10 @@ body {
     width: 100%; }
   body .table-light {
     --bs-table-bg: #ff9595; }
-  body #galeria img {
-    width: 100%; }
-  body #galeria .col-lg-3 {
+  body .col-lg-3 {
     padding: 10px; }
   body .cada-foto {
+    width: 100%;
     transition: 0.5s;
     object-fit: cover; }
   body .cada-foto:hover {
