@@ -473,3 +473,24 @@ body {
       margin-bottom: 2em; }
     body footer p, body footer .p-center {
       padding-right: 0; } }
+  body #h2-404 {
+    color: black;
+    font-size: 20px;
+    padding: 20px; }
+  body #img-404 {
+    width: 35%; }
+  body #flex-404 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center; }
+  @media screen and (max-width: 1024px) {
+    body #img-404 {
+      width: 50%; } }
+  @media screen and (max-width: 768px) {
+    body #img-404 {
+      width: 70%; }
+    body #h2-404 {
+      font-size: 16px; } }
